@@ -39,19 +39,19 @@ const Navbar = () => {
             </h3> */}
             <Link
               to="/dashboard"
-              className="font-bold text-black bg-gray-200 border-2 border-black rounded px-3 py-1 shadow-[2px_2px_0_0_#000] hover:bg-gray-400 transition"
+              className="font-bold text-black bg-neutral-300 border-2 border-black rounded px-3 py-1 shadow-[2px_2px_0_0_#000] hover:bg-stone-400 transition"
             >
               Dashboard
             </Link>
             <Link
               to={user && user._id ? `/profile/${user._id}` : "#"}
-              className="font-bold text-black bg-zinc-200 border-2 border-black rounded px-3 py-1 shadow-[2px_2px_0_0_#000] hover:bg-zinc-400 transition"
+              className="font-bold text-black bg-neutral-300 border-2 border-black rounded px-3 py-1 shadow-[2px_2px_0_0_#000] hover:bg-stone-400 transition"
             >
               Profile
             </Link>
             <Link
               onClick={logout}
-              className="font-bold text-black bg-neutral-200 border-2 border-black rounded px-3 py-1 shadow-[2px_2px_0_0_#000] hover:bg-red-500 transition"
+              className="font-bold text-black bg-neutral-300 border-2 border-black rounded px-3 py-1 shadow-[2px_2px_0_0_#000] hover:bg-red-500 transition"
             >
               Logout
             </Link>
@@ -60,13 +60,13 @@ const Navbar = () => {
           <>
             <Link
               to="/login"
-              className="font-bold text-black bg-stone-200 border-2 border-black rounded px-3 py-1 shadow-[2px_2px_0_0_#000] hover:bg-teal-400 transition"
+              className="font-bold text-black bg-stone-200 border-2 border-black rounded px-3 py-1 shadow-[2px_2px_0_0_#000] hover:bg-teal-200 transition"
             >
               Login
             </Link>
             <Link
               to="/signup"
-              className="font-bold text-black bg-stone-200 border-2 border-black rounded px-3 py-1 shadow-[2px_2px_0_0_#000] hover:bg-teal-400 transition"
+              className="font-bold text-black bg-stone-200 border-2 border-black rounded px-3 py-1 shadow-[2px_2px_0_0_#000] hover:bg-teal-200 transition"
             >
               Signup
             </Link>

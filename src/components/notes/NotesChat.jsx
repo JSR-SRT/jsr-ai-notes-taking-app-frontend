@@ -29,8 +29,8 @@ const NotesChat = ({ userId }) => {
   };
 
   return (
-    <div className="bg-white border-4 border-black rounded-2xl p-8 shadow-[6px_6px_0_0_#000] my-10">
-      <h2 className="text-2xl font-extrabold text-black mb-6 border-4 border-black rounded-lg bg-pink-200 py-2 px-2 text-center">
+    <div className="bg-neutral-200 border-4 border-black rounded-2xl p-8 shadow-[6px_6px_0_0_#000] my-10">
+      <h2 className="text-2xl font-extrabold text-black mb-6 border-4 border-black rounded-lg bg-neutral-200 py-2 px-2 text-center">
         Ask a Question About Notes
       </h2>
       <form onSubmit={handleAskQuestion} className="space-y-6">
@@ -39,13 +39,13 @@ const NotesChat = ({ userId }) => {
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
           placeholder="Ask a question about the notes..."
-          className="w-full p-3 border-4 border-black rounded-lg bg-yellow-50 shadow-[2px_2px_0_0_#000] font-mono text-black"
+          className="w-full p-3 border-4 border-black rounded-lg bg-neutral-50 shadow-[2px_2px_0_0_#000] font-mono text-black"
           required
         />
         <Link
           type="submit"
           disabled={loading}
-          className="bg-blue-300 border-4 border-black text-black font-extrabold px-6 py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-blue-400 transition-all duration-200 w-full"
+          className="bg-stone-300 border-4 border-black text-black font-extrabold px-6 py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-teal-200 transition-all duration-200 w-full"
         >
           {loading ? "Asking..." : "Ask"}
         </Link>
@@ -58,7 +58,7 @@ const NotesChat = ({ userId }) => {
           <h3 className="text-lg font-extrabold mb-4 text-black">
             AI's Answer:
           </h3>
-          <p className="text-black bg-yellow-100 border-2 border-black rounded-lg p-4 shadow-[1px_1px_0_0_#000] font-mono">
+          <p className="text-neutral-200 bg-black border-2 border-black rounded-lg p-4 shadow-[1px_1px_0_0_#000] font-mono">
             {answer}
           </p>
         </div>

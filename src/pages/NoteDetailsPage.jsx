@@ -67,81 +67,83 @@ const NoteDetailsPage = () => {
     return <div className="text-center mt-10 text-red-500">{error}</div>;
 
   return (
-    <div className="min-h-screen max-w-3xl mx-auto px-6 py-10 bg-stone-300 ">
-      {isEditing ? (
-        <div className="bg-neutral-100 border-4 border-black rounded-2xl p-8 shadow-[6px_6px_0_0_#000]">
-          <input
-            type="text"
-            name="title"
-            value={formData.title}
-            onChange={handleInputChange}
-            className="w-full p-3 border-4 border-black rounded-lg bg-red-100 shadow-[2px_2px_0_0_#000] font-extrabold text-2xl mb-6 text-black"
-            placeholder="Title"
-          />
-          <textarea
-            name="content"
-            value={formData.content}
-            onChange={handleInputChange}
-            className="w-full p-3 border-4 border-black rounded-lg bg-yellow-50 shadow-[2px_2px_0_0_#000] font-mono text-black mb-6 min-h-[150px]"
-            placeholder="Content"
-          ></textarea>
-          <input
-            type="text"
-            name="tags"
-            value={formData.tags}
-            onChange={handleInputChange}
-            className="w-full p-3 border-4 border-black rounded-lg bg-white shadow-[2px_2px_0_0_#000] font-mono text-black mb-6"
-            placeholder="Tags (comma-separated)"
-          />
-          <div className="flex items-center mb-6">
-            <label className="mr-3 font-bold text-black">Pinned:</label>
+    <div className="min-h-screen  bg-stone-300 ">
+      <div className="min-h-screen max-w-3xl mx-auto px-6 py-10 bg-stone-300 ">
+        {isEditing ? (
+          <div className="bg-neutral-200 border-4 border-black rounded-2xl p-8 shadow-[6px_6px_0_0_#000]">
             <input
-              type="checkbox"
-              checked={formData.isPinned}
-              onChange={handleTogglePin}
-              className="border-2 border-black rounded shadow-[1px_1px_0_0_#000]"
+              type="text"
+              name="title"
+              value={formData.title}
+              onChange={handleInputChange}
+              className="w-full p-3 border-4 border-black rounded-lg bg-red-100 shadow-[2px_2px_0_0_#000] font-extrabold text-2xl mb-6 text-black"
+              placeholder="Title"
             />
-          </div>
-          <button
-            onClick={handleSaveNote}
-            className="bg-teal-100 border-4 border-black text-black font-extrabold px-6 py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-teal-200 transition-all duration-200"
-          >
-            Save Note
-          </button>
-        </div>
-      ) : (
-        <div className="bg-white border-4 border-black rounded-2xl p-8 shadow-[6px_6px_0_0_#000]">
-          <h1 className="text-4xl font-extrabold mb-6 border-4 border-black rounded-lg bg-red-100 py-3 px-2  text-black">
-            {note.title}
-          </h1>
-          <p className="text-black text-lg font-mono bg-yellow-50 border-2 border-black rounded-lg px-2 py-2 mb-6 shadow-[1px_1px_0_0_#000]">
-            {note.content}
-          </p>
-          <div className="flex flex-wrap gap-3 mb-6">
-            <div className="flex flex-wrap gap-2">
-              {note.isPinned && (
-                <span className="bg-orange-100 border-2 border-black text-black text-xs font-bold px-3 py-1 rounded-full font-mono">
-                  📌 Pinned
-                </span>
-              )}
+            <textarea
+              name="content"
+              value={formData.content}
+              onChange={handleInputChange}
+              className="w-full p-3 border-4 border-black rounded-lg bg-yellow-50 shadow-[2px_2px_0_0_#000] font-mono text-black mb-6 min-h-[150px]"
+              placeholder="Content"
+            ></textarea>
+            <input
+              type="text"
+              name="tags"
+              value={formData.tags}
+              onChange={handleInputChange}
+              className="w-full p-3 border-4 border-black rounded-lg bg-white shadow-[2px_2px_0_0_#000] font-mono text-black mb-6"
+              placeholder="Tags (comma-separated)"
+            />
+            <div className="flex items-center mb-6">
+              <label className="mr-3 font-bold text-black">Pinned:</label>
+              <input
+                type="checkbox"
+                checked={formData.isPinned}
+                onChange={handleTogglePin}
+                className="border-2 border-black rounded shadow-[1px_1px_0_0_#000]"
+              />
             </div>
-            {note.tags.map((tag, index) => (
-              <span
-                key={index}
-                className="bg-zinc-200 border-2 border-black text-black text-xs font-bold px-3 py-1 rounded-full font-mono"
-              >
-                #{tag}
-              </span>
-            ))}
+            <button
+              onClick={handleSaveNote}
+              className="bg-teal-100 border-4 border-black text-black font-extrabold px-6 py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-teal-200 transition-all duration-200"
+            >
+              Save Note
+            </button>
           </div>
-          <button
-            onClick={() => setIsEditing(true)}
-            className="cursor-pointer bg-teal-100 border-4 border-black text-black font-extrabold px-6 py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-teal-200 transition-all duration-200"
-          >
-            Edit Note
-          </button>
-        </div>
-      )}
+        ) : (
+          <div className="bg-neutral-200 border-4 border-black rounded-2xl p-8 shadow-[6px_6px_0_0_#000]">
+            <h1 className="text-4xl font-extrabold mb-6 border-4 border-black rounded-lg bg-red-100 py-3 px-2  text-black">
+              {note.title}
+            </h1>
+            <p className="text-black text-lg font-mono bg-yellow-50 border-2 border-black rounded-lg px-2 py-2 mb-6 shadow-[1px_1px_0_0_#000]">
+              {note.content}
+            </p>
+            <div className="flex flex-wrap gap-3 mb-6">
+              <div className="flex flex-wrap gap-2">
+                {note.isPinned && (
+                  <span className="bg-orange-100 border-2 border-black text-black text-xs font-bold px-3 py-1 rounded-full font-mono">
+                    📌 Pinned
+                  </span>
+                )}
+              </div>
+              {note.tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="bg-zinc-200 border-2 border-black text-black text-xs font-bold px-3 py-1 rounded-full font-mono"
+                >
+                  #{tag}
+                </span>
+              ))}
+            </div>
+            <button
+              onClick={() => setIsEditing(true)}
+              className="cursor-pointer bg-teal-100 border-4 border-black text-black font-extrabold px-6 py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-teal-200 transition-all duration-200"
+            >
+              Edit Note
+            </button>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

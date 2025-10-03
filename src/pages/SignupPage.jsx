@@ -40,9 +40,9 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-blue-200">
-      <div className="bg-white border-4 border-black rounded-2xl shadow-[8px_8px_0_0_#000] w-full max-w-md p-10">
-        <h2 className="text-3xl font-extrabold text-black text-center mb-8 border-4 border-black rounded-lg bg-green-200 py-3">
+    <div className="flex items-center justify-center min-h-screen bg-stone-400">
+      <div className="bg-stone-300 border-4 border-black rounded-2xl shadow-[8px_8px_0_0_#000] w-full max-w-md p-10">
+        <h2 className="text-3xl font-extrabold text-black text-center mb-8 border-4 border-black rounded-lg bg-stone-300 py-3">
           Create Your Account
         </h2>
 
@@ -63,7 +63,7 @@ const SignupPage = () => {
             <input
               id="fullName"
               type="text"
-              className="block w-full p-3 border-4 border-black rounded-lg bg-yellow-50 shadow-[2px_2px_0_0_#000] focus:ring-2 focus:ring-green-300 font-mono text-black"
+              className="block w-full p-3 border-4 border-black rounded-lg bg-neutral-100 shadow-[2px_2px_0_0_#000] focus:ring-2 focus:ring-neutral-300 font-mono text-black"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
               required
@@ -81,7 +81,7 @@ const SignupPage = () => {
             <input
               id="email"
               type="email"
-              className="block w-full p-3 border-4 border-black rounded-lg bg-yellow-50 shadow-[2px_2px_0_0_#000] focus:ring-2 focus:ring-green-300 font-mono text-black"
+              className="block w-full p-3 border-4 border-black rounded-lg bg-neutral-100 shadow-[2px_2px_0_0_#000] focus:ring-2 focus:ring-neutral-300 font-mono text-black"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -99,7 +99,7 @@ const SignupPage = () => {
             <input
               id="password"
               type="password"
-              className="block w-full p-3 border-4 border-black rounded-lg bg-yellow-50 shadow-[2px_2px_0_0_#000] focus:ring-2 focus:ring-green-300 font-mono text-black"
+              className="block w-full p-3 border-4 border-black rounded-lg bg-neutral-100 shadow-[2px_2px_0_0_#000] focus:ring-2 focus:ring-neutral-300 font-mono text-black"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -117,7 +117,7 @@ const SignupPage = () => {
             <input
               id="confirmPassword"
               type="password"
-              className="block w-full p-3 border-4 border-black rounded-lg bg-yellow-50 shadow-[2px_2px_0_0_#000] focus:ring-2 focus:ring-green-300 font-mono text-black"
+              className="block w-full p-3 border-4 border-black rounded-lg bg-neutral-100 shadow-[2px_2px_0_0_#000] focus:ring-2 focus:ring-neutral-300 font-mono text-black"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
@@ -127,7 +127,7 @@ const SignupPage = () => {
           <button
             type="submit"
             disabled={loading}
-            className="cursor-pointer w-full bg-green-300 border-4 border-black text-black font-extrabold py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-green-400 transition-all duration-200"
+            className="cursor-pointer w-full bg-stone-300 border-4 border-black text-black font-extrabold py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-teal-200 transition-all duration-200"
           >
             {loading ? "Signing up..." : "Sign Up"}
           </button>
@@ -135,7 +135,7 @@ const SignupPage = () => {
 
         <p className="text-center text-base text-black mt-6 font-mono">
           Already have an account?{" "}
-          <Link to="/login" className="text-blue-700 font-bold underline hover:text-blue-900">
+          <Link to="/login" className="text-teal-700 font-bold underline hover:text-teal-900">
             Log in
           </Link>
         </p>

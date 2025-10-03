@@ -25,8 +25,8 @@ const NotesSemanticSearch = () => {
   };
 
   return (
-    <div className="bg-white border-4 border-black rounded-2xl p-8 shadow-[6px_6px_0_0_#000] mt-10">
-      <h2 className="text-2xl font-extrabold text-black mb-6 border-2 border-black rounded-lg bg-pink-200 py-2 px-2 shadow-[2px_2px_0_0_#000] text-center">Ask Questions About Notes</h2>
+    <div className="bg-neutral-100 border-4 border-black rounded-2xl p-8 shadow-[6px_6px_0_0_#000] mt-10">
+      <h2 className="text-2xl font-extrabold text-black mb-6 border-2 border-black rounded-lg bg-teal-200 py-2 px-2 shadow-[2px_2px_0_0_#000] text-center">Ask Questions About Notes</h2>
       <form onSubmit={handleSearch} className="space-y-6">
         <input
           type="text"
@@ -39,7 +39,7 @@ const NotesSemanticSearch = () => {
         <button
           type="submit"
           disabled={loading}
-          className="bg-blue-300 border-4 border-black text-black font-extrabold px-6 py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-blue-400 transition-all duration-200 w-full"
+          className="bg-teal-100 border-4 border-black text-black font-extrabold px-6 py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-teal-200 transition-all duration-200 w-full"
         >
           {loading ? "Searching..." : "Ask"}
         </button>

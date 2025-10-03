@@ -122,7 +122,7 @@ const DashboardPage = () => {
   return (
     <div className="min-h-screen bg-stone-300">
       <div className="min-h-screen max-w-5xl mx-auto px-6 py-10 bg-stone-300">
-        <h1 className="text-4xl font-extrabold text-stone-300 mb-10 border-4 border-black rounded-lg bg-black py-4  text-center">
+        <h1 className="text-4xl font-extrabold text-stone-200 mb-10 border-4 border-black rounded-lg bg-neutral-700 py-4  text-center">
           Welcome, {user?.fullName || "User"} 👋🏻
         </h1>
 
@@ -138,7 +138,7 @@ const DashboardPage = () => {
           <div className="mt-3 flex items-center gap-3">
             <button
               type="submit"
-              className="cursor-pointer bg-neutral-300 border-4 border-black text-black font-extrabold px-6 py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-teal-400 transition-all duration-200"
+              className="cursor-pointer bg-neutral-300 border-4 border-black text-black font-extrabold px-6 py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-teal-100 transition-all duration-200"
             >
               Search
             </button>
@@ -161,7 +161,7 @@ const DashboardPage = () => {
         {/* Button to Open Modal */}
         <button
           onClick={() => setIsModalOpen(true)}
-          className="cursor-pointer mb-10 bg-neutral-300 border-4 border-black text-black font-extrabold px-6 py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-teal-400 transition-all duration-200"
+          className="cursor-pointer mb-10 bg-neutral-300 border-4 border-black text-black font-extrabold px-6 py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-teal-100 transition-all duration-200"
         >
           Create Note
         </button>
@@ -214,7 +214,7 @@ const DashboardPage = () => {
                 className={`px-4 py-2 border-4 border-black rounded-lg shadow-[2px_2px_0_0_#000] font-bold ${
                   page <= 1
                     ? "bg-stone-300 text-stone-800 cursor-not-allowed"
-                    : "bg-stone-300 hover:bg-gray-100 cursor-pointer"
+                    : "bg-stone-300 hover:bg-stone-100 cursor-pointer"
                 }`}
               >
                 Prev
@@ -230,7 +230,7 @@ const DashboardPage = () => {
                 className={`px-4 py-2 border-4 border-black rounded-lg shadow-[2px_2px_0_0_#000] font-bold ${
                   page >= Math.max(1, Math.ceil((total || 0) / pageSize))
                     ? "bg-stone-300 text-stone-800 cursor-not-allowed"
-                    : "bg-stone-300 hover:bg-gray-100 cursor-pointer"
+                    : "bg-stone-300 hover:bg-stone-100 cursor-pointer"
                 }`}
               >
                 Next

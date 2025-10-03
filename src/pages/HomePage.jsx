@@ -1,6 +1,6 @@
 const HomePage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-stone-300">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-stone-400">
       <h1 className="text-5xl font-extrabold mb-8 text-black text-center max-w-2xl border-4 border-black rounded-2xl bg-neutral-300 py-6 px-4 shadow-[8px_8px_0_0_#000]">
         Hassle-free note taking, publish and share your notes with AI summarizer
       </h1>
