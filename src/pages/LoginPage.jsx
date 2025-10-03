@@ -33,9 +33,9 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-blue-200">
-      <div className="bg-white border-4 border-black rounded-2xl shadow-[8px_8px_0_0_#000] w-full max-w-md p-10">
-        <h2 className="text-3xl font-extrabold text-black text-center mb-8 border-4 border-black rounded-lg bg-yellow-200 py-3 ">
+    <div className="flex items-center justify-center min-h-screen bg-stone-400">
+      <div className="bg-stone-300 border-4 border-black rounded-2xl shadow-[8px_8px_0_0_#000] w-full max-w-md p-10">
+        <h2 className="text-3xl font-extrabold text-stone-800 text-center mb-8 border-4 border-black rounded-lg bg-stone-300 py-3 ">
           Login to Your Account
         </h2>
 
@@ -56,7 +56,7 @@ const LoginPage = () => {
             <input
               id="email"
               type="email"
-              className="block w-full p-3 border-4 border-black rounded-lg bg-yellow-50 shadow-[2px_2px_0_0_#000] focus:ring-2 focus:ring-pink-300 font-mono text-black"
+              className="block w-full p-3 border-4 border-black rounded-lg bg-neutral-100 shadow-[2px_2px_0_0_#000] focus:ring-2 focus:ring-neutral-300 focus:bg-neutral-100 autofill:bg-neutral-100 font-mono text-black"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -74,7 +74,7 @@ const LoginPage = () => {
             <input
               id="password"
               type="password"
-              className="block w-full p-3 border-4 border-black rounded-lg bg-yellow-50 shadow-[2px_2px_0_0_#000] focus:ring-2 focus:ring-pink-300 font-mono text-black"
+              className="block w-full p-3 border-4 border-black rounded-lg bg-neutral-100 shadow-[2px_2px_0_0_#000] focus:ring-2 focus:ring-neutral-300 font-mono text-black"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -84,7 +84,7 @@ const LoginPage = () => {
           <button
             type="submit"
             disabled={loading}
-            className="cursor-pointer w-full bg-pink-300 border-4 border-black text-black font-extrabold py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-pink-400 transition-all duration-200"
+            className="cursor-pointer w-full bg-stone-300 border-4 border-black text-stone-800 font-extrabold py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-teal-200 transition-all duration-200"
           >
             {loading ? "Logging in..." : "Login"}
           </button>
@@ -94,7 +94,7 @@ const LoginPage = () => {
           Don't have an account?{" "}
           <a
             href="/signup"
-            className="text-blue-700 font-bold underline hover:text-blue-900"
+            className="text-teal-700 font-bold underline hover:text-teal-900"
           >
             Sign up
           </a>
