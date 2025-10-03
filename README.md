@@ -1,10 +1,8 @@
-# Notes App - Educational Project
+JSR AI Note-Taking App
 
 ## Overview
 
-The **Notes App** is an educational project designed to demonstrate the implementation of a full-stack web application. It allows users to create, manage, and share notes. The app also includes advanced features such as semantic search and AI-powered question answering based on user notes.
-
-This project is built using modern web technologies, including **React**, **Node.js**, **MongoDB**, and **OpenAI's GPT model** for AI-powered features.
+A full-stack, scalable note-taking app built with React and Tailwind CSS on the frontend, and Node.js, Express.js, and MongoDB on the backend. The application features secure authentication, intuitive note management (create, edit, delete, pin), intelligent search, and community publishing. It is architected with a modular design and fully integrated with OpenAI, enabling context-aware Q&A powered by Retrieval-Augmented Generation (RAG) for personalized note insights.
 
 ---
 
