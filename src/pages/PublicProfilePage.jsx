@@ -64,7 +64,7 @@ const PublicProfilePage = () => {
     return <div className="text-center mt-10 text-red-500">{error}</div>;
 
   return (
-    <div className="min-h-screen  bg-blue-200 ">
+    <div className="min-h-screen  bg-stone-300 ">
       <div className="min-h-screen max-w-5xl mx-auto px-6 py-10 bg-blue-200 ">
         <h1 className="text-4xl font-extrabold text-black mb-6 border-4 border-black rounded-lg bg-green-200 py-4  text-center">
           {profile.fullName}'s Public Profile

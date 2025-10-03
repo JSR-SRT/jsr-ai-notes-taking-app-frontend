@@ -15,7 +15,7 @@ const NoteCard = ({ note, onDelete }) => {
   };
 
   return (
-    <div className="bg-white border-4 border-black rounded-2xl p-6 flex flex-col justify-between shadow-[6px_6px_0_0_#000] hover:shadow-[10px_10px_0_0_#000] transition-all duration-200">
+    <div className="bg-neutral-200 border-4 border-black rounded-2xl p-6 flex flex-col justify-between shadow-[6px_6px_0_0_#000] hover:shadow-[10px_10px_0_0_#000] transition-all duration-200">
       <div>
         {/* Pinned Icon
         {note.isPinned && (
@@ -25,29 +25,28 @@ const NoteCard = ({ note, onDelete }) => {
         )} */}
 
         {/* Title */}
-        <h2 className="text-2xl font-extrabold mb-3 text-black border-2 border-black rounded-lg bg-pink-200 px-2 py-1  truncate">
+        <h2 className="text-2xl font-extrabold mb-3 text-black border-2 border-black rounded-lg bg-red-100 px-2 py-1  truncate">
           {note.title}
         </h2>
 
         {/* Content */}
-        <p className="text-black text-base font-mono bg-yellow-50 border-2 border-black rounded-lg px-2 py-2 mt-2  line-clamp-4 overflow-y-auto">{note.content}</p>
- <div className="mt-4 flex flex-wrap gap-2">
-         
-          
-              {note.isPinned &&  <span
-      
-              className="bg-yellow-200 border-2 border-black text-black text-xs font-bold px-3 py-1 rounded-full font-mono"
-            >📌 Pinned</span>}
-           
-      
+        <p className="text-black text-base font-mono bg-yellow-50 border-2 border-black rounded-lg px-2 py-2 mt-2  line-clamp-4 overflow-y-auto">
+          {note.content}
+        </p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {note.isPinned && (
+            <span className="bg-orange-100 border-2 border-black text-black text-xs font-bold px-3 py-1 rounded-full font-mono">
+              📌 Pinned
+            </span>
+          )}
         </div>
-        
+
         {/* Tags */}
         <div className="mt-4 flex flex-wrap gap-2">
           {note.tags.map((tag, index) => (
             <span
               key={index}
-              className="bg-blue-200 border-2 border-black text-black text-xs font-bold px-3 py-1 rounded-full font-mono"
+              className="bg-zinc-200 border-2 border-black text-black text-xs font-bold px-3 py-1 rounded-full font-mono"
             >
               #{tag}
             </span>
@@ -58,33 +57,39 @@ const NoteCard = ({ note, onDelete }) => {
       {/* Footer */}
       <div className="flex items-center justify-between mt-6 text-xs text-black font-mono">
         {/* Created Date */}
-        <span className=" px-2 py-1">Created on: {new Date(note.createdOn).toLocaleDateString()}</span>
+        <span className=" px-2 py-1">
+          Created on: {new Date(note.createdOn).toLocaleDateString()}
+        </span>
 
         {/* Actions */}
         <div className="flex-col space-x-2 space-y-2 items-center">
           <div className="flex gap-x-1">
-          <Link
-            to={`/notes/${note._id}`}
-            className="font-bold text-blue-700 bg-white border-2 border-black rounded px-2 py-1 shadow-[1px_1px_0_0_#000] hover:bg-blue-200 transition"
-          >
-            View
-          </Link>
-          <Link
-            to={`/notes/${note._id}`}
-            className="font-bold text-green-700 bg-white border-2 border-black rounded px-2 py-1 shadow-[1px_1px_0_0_#000] hover:bg-green-200 transition"
-          >
-            Edit
-          </Link>
-          <button
-            onClick={() => onDelete(note._id)}
-            className="cursor-pointer font-bold text-red-700 bg-white border-2 border-black rounded px-2 py-1 shadow-[1px_1px_0_0_#000] hover:bg-red-200 transition"
-          >
-            Delete
-          </button>
-</div>
+            <Link
+              to={`/notes/${note._id}`}
+              className="font-bold text-blue-800 bg-white border-2 border-black rounded px-2 py-1 shadow-[1px_1px_0_0_#000] hover:bg-blue-100 transition"
+            >
+              View
+            </Link>
+            <Link
+              to={`/notes/${note._id}`}
+              className="font-bold text-teal-800 bg-white border-2 border-black rounded px-2 py-1 shadow-[1px_1px_0_0_#000] hover:bg-teal-100 transition"
+            >
+              Edit
+            </Link>
+            <button
+              onClick={() => onDelete(note._id)}
+              className="cursor-pointer font-bold text-red-800 bg-white border-2 border-black rounded px-2 py-1 shadow-[1px_1px_0_0_#000] hover:bg-red-100 transition"
+            >
+              Delete
+            </button>
+          </div>
           <button
             onClick={handleToggleVisibility}
-            className={`cursor-pointer font-bold border-2 border-black rounded px-2 py-1 shadow-[1px_1px_0_0_#000] transition ${isPublic ? 'bg-yellow-200 text-yellow-700 hover:bg-yellow-300' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'}`}
+            className={`cursor-pointer font-bold border-2 border-black rounded px-2 py-1 shadow-[1px_1px_0_0_#000] transition ${
+              isPublic
+                ? "bg-neutral-200 text-neutral-800 hover:bg-yellow-200"
+                : "bg-neutral-200 text-neutral-700 hover:bg-yellow-200"
+            }`}
           >
             {isPublic ? "Unpublish" : "Publish"}
           </button>

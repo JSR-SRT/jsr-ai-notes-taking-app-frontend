@@ -33,8 +33,8 @@ const CreateNote = ({ onNoteAdded }) => {
   };
 
   return (
-    <div className="max-w-xl mx-auto py-10 px-6 bg-yellow-100 border-4 border-black rounded-2xl shadow-[8px_8px_0_0_#000]">
-      <h1 className="text-3xl font-extrabold text-black mb-8 border-4 border-black rounded-lg bg-pink-200 py-3 shadow-[4px_4px_0_0_#000] text-center">
+    <div className="max-w-xl mx-auto py-10 px-6 bg-stone-100 border-4 border-black rounded-2xl shadow-[8px_8px_0_0_#000]">
+      <h1 className="text-3xl font-extrabold text-black mb-8 border-4 border-black rounded-lg bg-teal-200 py-3 shadow-[4px_4px_0_0_#000] text-center">
         Create a New Note
       </h1>
 
@@ -49,7 +49,7 @@ const CreateNote = ({ onNoteAdded }) => {
           <label className="block mb-1 font-bold text-black">Title</label>
           <input
             type="text"
-            className="w-full p-3 border-4 border-black rounded-lg bg-white shadow-[2px_2px_0_0_#000] focus:ring-2 focus:ring-pink-300 font-mono text-black"
+            className="w-full p-3 border-4 border-black rounded-lg bg-white shadow-[2px_2px_0_0_#000] focus:ring-2 focus:ring-neutral-300 font-mono text-black"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             required
@@ -59,7 +59,7 @@ const CreateNote = ({ onNoteAdded }) => {
         <div>
           <label className="block mb-1 font-bold text-black">Content</label>
           <textarea
-            className="w-full p-3 border-4 border-black rounded-lg bg-white shadow-[2px_2px_0_0_#000] min-h-[150px] focus:ring-2 focus:ring-pink-300 font-mono text-black"
+            className="w-full p-3 border-4 border-black rounded-lg bg-white shadow-[2px_2px_0_0_#000] min-h-[150px] focus:ring-2 focus:ring-neutral-300 font-mono text-black"
             value={content}
             onChange={(e) => setContent(e.target.value)}
             required
@@ -70,7 +70,7 @@ const CreateNote = ({ onNoteAdded }) => {
           <label className="block mb-1 font-bold text-black">Tags</label>
           <input
             type="text"
-            className="w-full p-3 border-4 border-black rounded-lg bg-white shadow-[2px_2px_0_0_#000] focus:ring-2 focus:ring-pink-300 font-mono text-black"
+            className="w-full p-3 border-4 border-black rounded-lg bg-white shadow-[2px_2px_0_0_#000] focus:ring-2 focus:ring-neutral-300 font-mono text-black"
             value={tags}
             onChange={(e) => setTags(e.target.value)}
             placeholder="Enter tags separated by commas"
@@ -93,7 +93,7 @@ const CreateNote = ({ onNoteAdded }) => {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-pink-300 border-4 border-black text-black font-extrabold py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-pink-400 transition-all duration-200"
+          className="w-full bg-teal-300 border-4 border-black text-black font-extrabold py-3 rounded-lg shadow-[2px_2px_0_0_#000] hover:bg-teal-400 transition-all duration-200"
         >
           {loading ? "Saving..." : "Create Note"}
         </button>
